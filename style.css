@@ -1,0 +1,237 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6; /* Soft neutral background */
+    color: #333; /* Muted dark text */
+    line-height: 1.6;
+}
+
+header {
+    background: #1b2838; /* Deep muted royal blue */
+    color: #f4f4f4; /* Light text */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: #445f8c; /* Muted royal blue */
+    color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tab:hover {
+    background: #6278a1; /* Slightly lighter blue on hover */
+}
+
+.tab.active {
+    background: #ac7339; /* Muted gold for active tab */
+    color: #fff;
+}
+
+/* Section Styling */
+main {
+    padding: 20px;
+}
+
+.tab-content {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff; /* Clean white background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs and Buttons */
+textarea, input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus, input:focus, select:focus {
+    border-color: #ac7339; /* Muted gold focus border */
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #445f8c; /* Muted royal blue */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #6278a1; /* Slightly lighter blue */
+    transform: translateY(-2px); /* Subtle hover effect */
+}
+
+button:active {
+    transform: translateY(0); /* Reset when clicked */
+}
+
+/* Notebook Styling */
+.notebook-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#notesList {
+    list-style: none;
+    padding: 0;
+}
+
+#notesList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #445f8c;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#notesList li:hover {
+    border-color: #6278a1;
+}
+
+/* To-Do List Styling */
+.todo-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#taskList li[data-priority="high"] {
+    border-color: #ac3b3b; /* Muted burgundy for high priority */
+}
+
+#taskList li[data-priority="medium"] {
+    border-color: #e3a24a; /* Muted gold for medium priority */
+}
+
+#taskList li[data-priority="low"] {
+    border-color: #6ba36b; /* Muted green for low priority */
+}
+
+/* Calculator Styling */
+#calcInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 1.2em;
+    transition: border-color 0.3s ease;
+}
+
+#calcInput:focus {
+    border-color: #ac7339;
+    outline: none;
+}
+
+#calcButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#calcButtons button {
+    font-size: 1.2em;
+    background: #445f8c; /* Muted royal blue */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#calcButtons button:hover {
+    background: #6278a1; /* Lighter blue on hover */
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+#calcButtons button:active {
+    transform: scale(1); /* Reset when clicked */
+}
+
+/* Calculation History */
+#calcHistory {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#calcHistory li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    border-left: 4px solid #445f8c;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

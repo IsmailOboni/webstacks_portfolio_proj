@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUX</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FLUX</h1>
+        <nav>
+            <button class="tab" data-tab="notebook">Notebook</button>
+            <button class="tab" data-tab="todo">To-Do List</button>
+            <button class="tab" data-tab="calculator">Calculator</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Notebook Section -->
+        <section id="notebook" class="tab-content">
+            <h2>Notebook</h2>
+            <div class="notebook-controls">
+                <input type="text" id="searchNotes" placeholder="Search notes...">
+                <select id="noteCategory">
+                    <option value="general">General</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                </select>
+            </div>
+            <textarea id="noteArea" placeholder="Write your notes here..."></textarea>
+            <button id="saveNote">Save Note</button>
+            <ul id="notesList"></ul>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo" class="tab-content hidden">
+            <h2>To-Do List</h2>
+            <div class="todo-controls">
+                <input type="text" id="taskInput" placeholder="Add a new task">
+                <input type="date" id="taskDate">
+                <select id="taskPriority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+            </div>
+            <button id="addTask">Add Task</button>
+            <ul id="taskList" class="sortable"></ul>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="tab-content hidden">
+            <h2>Calculator</h2>
+            <input type="text" id="calcInput" placeholder="0">
+            <div id="calcButtons">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>*</button>
+                <button>0</button>
+                <button>C</button>
+                <button>=</button>
+                <button>/</button>
+                <button>sin</button>
+                <button>cos</button>
+                <button>tan</button>
+                <button>√</button>
+                <button>^</button>
+            </div>
+            <h3>History</h3>
+            <ul id="calcHistory"></ul>
+        </section>
+    </main>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
